@@ -10,7 +10,6 @@ from email.message import EmailMessage
 getPageJson = requests.get('https://yourwebsite.com/products.json')
 
 products = json.loads((getPageJson.text))['products']
-# print(collections)
 
 productList = []
 dateToday = str(date.today())
@@ -31,7 +30,7 @@ productListCount = len(productList)/4 # Divided by the 4 values of each value of
 productChange = False
 
 # While loop for the stock baseline; exits program after 2 seconds
-while productListCount == 3:
+while productListCount == 0:
     print("No changes to products...")
     print("Today's Product List Count:",productListCount)
     print("-"*40)
@@ -45,7 +44,7 @@ toAddress = ['abc@gmail.com','xyz@gmail.com']
 
 
 # If statement that prints the new productListCount when there's a change
-if productListCount != 3:
+if productListCount != 0:
     productChange = True
     print("---"*10+"THERE WAS A CHANGE IN PRODUCTS!!!"+"---"*10)
     print("Today's Product List Count:",productListCount)
