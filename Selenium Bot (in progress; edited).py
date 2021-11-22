@@ -54,10 +54,9 @@ driver.find_element_by_xpath('//button[@id="continue_button"]').click()
 # wait = WebDriverWait(driver,10)
 # wait.until(EC.frame_to_be_available_and_switch_to_it(By.ID,"card-fields-number"))
 
-# Properly switches to frame and returns frame but how to input card number...?
+# Properly switches to frame and returns frame but now to input CC number
 WebDriverWait(driver, 2).until(EC.frame_to_be_available_and_switch_to_it((By.CLASS_NAME,"card-fields-iframe")))
 
-# Work from here on...
 
 
 
